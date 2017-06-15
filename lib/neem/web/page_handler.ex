@@ -16,18 +16,18 @@ defmodule Neem.Web.PageHandler do
   end
 
   defp content_for(:home) do
-    "<h1>Home Page</h1>"
+    "<img src='/images/logo.png'/><h1>Home Page</h1>"
   end
 
   defp content_for(:contact) do
-    "<h1>Contact Page</h1>"
+    "<img src='/images/logo.png'/><h1>Contact Page</h1>"
   end
 
   defp content_for(:about) do
-    "<h1>About Page</h1>"
+    "<img src='/images/logo.png'/><h1>About Page</h1>"
   end
 
   defp content_for(_) do
-    "<h1>404 error</h1>"
+    "<img src='/images/logo.png'/><h1>404 error</h1>"
   end
 end
