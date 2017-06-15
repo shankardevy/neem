@@ -13,9 +13,12 @@ defmodule Neem.Application do
   end
 
   def start_cowboy() do
-    route = {"/", Neem.Web.PageHandler, []}
+    route1 = {"/", Neem.Web.PageHandler, :home}
+    route2 = {"/about", Neem.Web.PageHandler, :about}
+    route3 = {"/contact", Neem.Web.PageHandler, :contact}
+    route4 = {:_, Neem.Web.PageHandler, :not_found}
 
-    routes = [{:_, [route]}]
+    routes = [{:_, [route1, route2, route3, route4]}]
     dispatch = :cowboy_router.compile(routes)
 
     opts = [port: 5000]
