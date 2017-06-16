@@ -1,6 +1,6 @@
 defmodule Neem.Web.Router do
   use Garuda.Router
-  alias Neem.Web.Controller.{PageController, ContactController}
+  alias Neem.Web.{PageController, ContactController}
 
   get "/", PageController, :home
   get "/about", PageController, :about

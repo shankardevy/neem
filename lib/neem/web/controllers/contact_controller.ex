@@ -1,10 +1,9 @@
-defmodule Neem.Web.Controller.ContactController do
+defmodule Neem.Web.ContactController do
   import Assembly.Conn
   use Garuda.Controller
 
   def contact(conn, message) do
-    conn
-    |> put_resp_body("<img src='/images/logo.png'/><h1>Contact Page #{message}</h1>")
+    render(conn, "contact.html", message: message)
   end
 
   def call(conn, action) do
