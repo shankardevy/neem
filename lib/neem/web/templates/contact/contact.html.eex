@@ -1,0 +1,2 @@
+<img src='/images/logo.png'/>
+<h1>Contact Page <%= message %></h1>
